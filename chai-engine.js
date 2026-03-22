@@ -21,7 +21,6 @@ const chaiMap = {
   'chai-items-center': 'align-items: center',
   'chai-justify-center': 'justify-content: center',
 
-
   'chai-text-2xl': 'font-size: 24px',
   'chai-text-base': 'font-size: 16px',
   'chai-text-sm': 'font-size: 14px',
@@ -32,28 +31,25 @@ const chaiMap = {
   'chai-font-semibold': 'font-weight: 600',
   'chai-text-center': 'text-align: center',
 
-
   'chai-border': 'border: 1px solid #d1d5db',
   'chai-border-gray': 'border-color: #d1d5db',
   'chai-border-blue': 'border-color: #3b82f6',
   'chai-rounded': 'border-radius: 8px',
 
-
   'chai-outline-none': 'outline: none',
   'chai-transition': 'transition: all 0.2s',
   'chai-underline': 'text-decoration: underline',
-
 
   'chai-shadow': 'box-shadow: 0 1px 3px rgba(0,0,0,0.1)'
 };
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[class*="chai-"]').forEach(el => {
+  document.querySelectorAll('[class*="chai-"]').forEach(element => {
     Object.entries(chaiMap).forEach(([className, style]) => {
-      if (el.classList.contains(className)) {
-        el.style.cssText += style + ';';
-        el.classList.remove(className);
+      if (element.classList.contains(className)) {
+        element.style.cssText += style + ';';
+        element.classList.remove(className);
       }
     });
   });
